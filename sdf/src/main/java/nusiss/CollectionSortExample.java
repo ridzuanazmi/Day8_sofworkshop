@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CollectionSortExample {
 
@@ -43,13 +44,13 @@ public class CollectionSortExample {
     public static void example02() {
 
         // instantiate several objects from Employee class
-        Employee employee1 = new Employee(12345, "Ridzuan Azmi", "Technical", "Engineer", 
+        Employee employee1 = new Employee("12345", "Ridzuan Azmi", "Technical", "Engineer", 
         "ridzy666@email.com", 55000);
-        Employee employee2 = new Employee(12435, "Almas Alwani", "HR", "Recruiter", 
+        Employee employee2 = new Employee("12435", "Almas Alwani", "HR", "Recruiter", 
         "alwaney@email.com", 100000);
-        Employee employee3 = new Employee(89021, "Jalal Friday", "Engineering", "Senior Tecnician", 
+        Employee employee3 = new Employee("89021", "Jalal Friday", "Engineering", "Senior Tecnician", 
         "jalal@email.com", 40000);
-        Employee employee4 = new Employee(14309, "Atikah Hassan", "Kitchen", "Chef", 
+        Employee employee4 = new Employee("14309", "Atikah Hassan", "Kitchen", "Chef", 
         "teek@email.com", 10000);
 
         // make a list, employees, to store the employee objects
@@ -67,12 +68,16 @@ public class CollectionSortExample {
         Collections.sort(employees);
 
         // print out sorted employees 
-        System.out.println("Employees after sorting by full name = " + employees);
-        System.out.println("");
+        // System.out.println("Employees after sorting by full name = " + employees);
+        // System.out.println("");
 
         // sorting out employees using Comparator and lambda
         employees.sort(Comparator.comparing(e -> e.getSalary()));
         System.out.println("Employees after sorting by salary = " + employees);
+
+        List<Employee> filteredEmployees = employees.stream().filter(e -> e.getFullName().equalsIgnoreCase("Atikah Hassan"))
+        .collect(Collectors.toList());
+        System.out.println("Filtered employee = " + filteredEmployees);
 
     } // end of example02 method
 }

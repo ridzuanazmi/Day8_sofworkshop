@@ -2,7 +2,7 @@ package nusiss;
 
 public class Employee implements Comparable<Employee> {
     // fields
-    private Integer staffNo;
+    private String staffNo;
     private String fullName;
     private String department;
     private String role;
@@ -10,7 +10,7 @@ public class Employee implements Comparable<Employee> {
     private Integer salary;
 
     // constructor
-    public Employee(Integer staffNo, String fullName, String department, String role, String emailAdress,
+    public Employee(String staffNo, String fullName, String department, String role, String emailAdress,
             Integer salary) {
         this.staffNo = staffNo;
         this.fullName = fullName;
@@ -21,11 +21,11 @@ public class Employee implements Comparable<Employee> {
     }
     
     // getters and setters
-    public Integer getStaffNo() {
+    public String getStaffNo() {
         return staffNo;
     }
 
-    public void setStaffNo(Integer staffNo) {
+    public void setStaffNo(String staffNo) {
         this.staffNo = staffNo;
     }
 
