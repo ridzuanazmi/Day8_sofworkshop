@@ -52,6 +52,8 @@ public class CSVWriter {
             fw.append(COMMA_DELIMETER);
             fw.append(emp.getDepartment());
             fw.append(COMMA_DELIMETER);
+            fw.append(emp.getRole());
+            fw.append(COMMA_DELIMETER);
             fw.append(emp.getEmailAdress());
             fw.append(COMMA_DELIMETER);
             fw.append(String.valueOf(emp.getSalary()));

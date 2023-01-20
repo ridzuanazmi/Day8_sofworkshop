@@ -26,7 +26,7 @@ public final class App {
         String dirPath = "data";
         String fileName = "data.txt";
 
-        // create a directory
+        // create a directory to enter integers and a String
         File newDir = new File(dirPath);
         boolean isDirCreated = newDir.mkdir();
 
@@ -80,6 +80,7 @@ public final class App {
             System.out.println("An error occurred while writing to file: " + e.getMessage());
         }
 
+        // Start of employee read and write
         String fileEmployee = "employee.txt";
 
         // create a file in the directory created above and writes it in csv format
@@ -95,7 +96,13 @@ public final class App {
         CSVWriter cw = new CSVWriter();
         List<Employee> employeeList = cw.generateEmployee();
         cw.writeToCSV(employeeList, dirPath + File.separator + fileEmployee);
-
+        
+         
+        CSVReader cr = new CSVReader();
+        List<Employee> readEmployees = cr.readCSV(dirPath + File.separator + fileEmployee);
+        readEmployees.forEach(e -> System.out.println(e));
+        
+        /*
         // CSV reader. reads the CSV file
         FileReader fr = new FileReader(newEmployeeFile);
         BufferedReader br = new BufferedReader(fr);
@@ -127,7 +134,7 @@ public final class App {
         
         br.close();
         fr.close();
-        
+        */
 
-    }
+    } // end of main
 }

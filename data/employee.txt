@@ -1,5 +1,5 @@
 staffNo,fullName,department,role,emailAddress,salary
-12345,Ridzuan Azmi,Technical,ridzy666@email.com,55000,
-12435,Almas Alwani,HR,alwaney@email.com,100000,
-89021,Jalal Friday,Engineering,jalal@email.com,40000,
-14309,Atikah Hassan,Kitchen,teek@email.com,10000,
+12345,Ridzuan Azmi,Technical,Engineer,ridzy666@email.com,55000,
+12435,Almas Alwani,HR,Recruiter,alwaney@email.com,100000,
+89021,Jalal Friday,Engineering,Senior Tecnician,jalal@email.com,40000,
+14309,Atikah Hassan,Kitchen,Chef,teek@email.com,10000,
